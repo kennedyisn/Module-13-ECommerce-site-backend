@@ -14,17 +14,13 @@ Seeing that e-commerce is one of the quickest growing industry sectors in the wo
 
 ## Installation
 
-Before deploying this application you need to download the following dependencies. The link below these dependencies contains the code of this application.
-
-- SQL
-- Insomnia
-- Express.js
+Before running this application you need to install the required dependecies listed in the package.json file under "Dependencies". This can be done by entering "npm install " followed by the dependency name.
 
 ## Usage  
 
 The link below provides a full walkthrough video of how to run the application.
 
-https://github.com/kennedyisn/Module-13-ECommerce-site-backend
+
 
 ## Credits
 
