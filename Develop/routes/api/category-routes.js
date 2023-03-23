@@ -2,7 +2,6 @@ const router = require('express').Router();
 const { Category, Product } = require('../../models');
 
 // The `/api/categories` endpoint
-
 router.get('/', async (req, res) => {
   try {
     const categoryData = await Category.findAll({
@@ -60,18 +59,13 @@ router.put('/:id', (req, res) => {
   }
 });
 
-router.delete('/:id', (req, res) => {
-  // delete a category by its `id` value
+router.delete('/:id', async (req, res) => {
   try {
-    const deletedData = Category.destroy({
+    const deletedCategoryData = await Category.destroy({
       where: {
         id: req.params.id,
       },
     });
-    if (!deletedData) {
-      res.status(404).json({ message: 'No category found.'});
-      return;
-    }
     res.status(200).json(deletedCategoryData);
   } catch (err) {
     res.status(500).json(err);
